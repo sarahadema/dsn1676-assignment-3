@@ -1,0 +1,27 @@
+html {
+	box-sizing: border-box;
+}
+
+*.*::before, *::after; {
+	box-sizing: inherit;
+}
+
+.asteroid {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+	width: 200px;
+	height: 200px;
+	animation: asteroid-rotate 3s linear infinite;
+}
+
+@keyframes asteroid-rotate {
+
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
