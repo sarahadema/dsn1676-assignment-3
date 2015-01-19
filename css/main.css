@@ -6,12 +6,17 @@ html {
 	box-sizing: inherit;
 }
 
+.space {
+	background-image: url("../images/stars.svg");
+	background-color: black;
+}
+
 .asteroid {
 	position: absolute;
-	top: 200px;
-	left: 200px;
-	width: 200px;
-	height: 200px;
+	top: 150px;
+	left: 150px;
+	width: 100px;
+	height: 100px;
 	animation: asteroid-rotate 3s linear infinite;
 }
 
@@ -24,4 +29,9 @@ html {
 	100% {
 		transform: rotate(360deg);
 	}
+}
+
+.ship {
+	position: relative;
+	
 }
