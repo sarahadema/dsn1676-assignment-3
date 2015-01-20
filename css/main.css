@@ -43,13 +43,11 @@ html {
 }
 
 @-webkit-keyframes asteroid-rotate {
-
 	0% {-webkit-transform: rotate(0deg);}
 	100% {-webkit-transform: rotate(360deg);}
 }
 
 @keyframes asteroid-rotate {
-
 	0% {transform: rotate(0deg);}
 	100% {transform: rotate(360deg);}
 }
@@ -62,11 +60,9 @@ html {
 	height: 50px;
 	-webkit-animation: ship-dance 5s linear infinite ;
 	animation: ship-dance 5s linear infinite ;
-
 }
 
 @-webkit-keyframes ship-dance {
-
 	0% {left: 300px;top: 200px;}
 	25% {left:400px;top: 200px;}
 	50% {-webkit-transform: rotate(360deg);left:500px;top: 200px;}
@@ -76,7 +72,6 @@ html {
 }
 
 @keyframes ship-dance {
-
 	0% {left: 300px;top: 200px;}
 	25% {left:400px;top: 200px;}
 	50% {transform: rotate(360deg);left:500px;top: 200px;}
