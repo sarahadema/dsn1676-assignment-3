@@ -11,32 +11,26 @@ html {
 	background-color: black;
 	width: 100%;
 	height: 100vh;
+	-webkit-animation: space-zoom 20s linear infinite;
 	animation: space-zoom 20s linear infinite;
 }
 
-@keyframes space-zoom {
-
-	0% {
-		transform: scale(1,1);
-	}	
-
-	25% {
-		transform: scale(1.1,1.1);
-	}
-
-	50% {
-		transform: scale(1.2,1.2);
-	}	
-
-	75% {
-		transform: scale(1.1,1.1);
-	}
-
-	100% {
-		transform: scale(1,1);
-	}
-
+@-webkit-keyframes space-zoom {
+	0% {-webkit-transform: scale(1,1);}
+	25% {-webkit-transform: scale(1.1,1.1);}
+	50% {-webkit-transform: scale(1.2,1.2);}
+	75% {-webkit-transform: scale(1.1,1.1);}
+	100% {-webkit-transform: scale(1,1);}
 }
+
+@keyframes space-zoom {
+	0% {transform: scale(1,1);}
+	25% {transform: scale(1.1,1.1);}
+	50% {transform: scale(1.2,1.2);}
+	75% {transform: scale(1.1,1.1);}
+	100% {transform: scale(1,1);}
+}
+
 
 .asteroid {
 	position: absolute;
@@ -44,18 +38,20 @@ html {
 	left: 150px;
 	width: 100px;
 	height: 100px;
+	-webkit-animation: asteroid-rotate 3s linear infinite;
 	animation: asteroid-rotate 3s linear infinite;
+}
+
+@-webkit-keyframes asteroid-rotate {
+
+	0% {-webkit-transform: rotate(0deg);}
+	100% {-webkit-transform: rotate(360deg);}
 }
 
 @keyframes asteroid-rotate {
 
-	0% {
-		transform: rotate(0deg);
-	}
-
-	100% {
-		transform: rotate(360deg);
-	}
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
 }
 
 .ship {
@@ -64,46 +60,27 @@ html {
 	left: 300px;
 	width: 50px;
 	height: 50px;
+	-webkit-animation: ship-dance 5s linear infinite ;
 	animation: ship-dance 5s linear infinite ;
 
 }
 
+@-webkit-keyframes ship-dance {
+
+	0% {left: 300px;top: 200px;}
+	25% {left:400px;top: 200px;}
+	50% {-webkit-transform: rotate(360deg);left:500px;top: 200px;}
+	60% {-webkit-transform: rotate(-360deg);left:650px;top:200px;}
+	75% {-webkit-transform: rotate(360deg);left:800px;top: 200px;}
+	100% {-webkit-transform: rotate(720deg);left:1500px;top:1000px;}
+}
+
 @keyframes ship-dance {
 
-	0% {
-		left: 300px;
-		top: 200px;
-	}
-
-	25% {
-		left:400px;
-		top: 200px;
-	}
-
-	50% {
-		transform: rotate(360deg);
-		left:500px;
-		top: 200px;
-	}
-
-	60% {
-		transform: rotate(-360deg);
-		left:650px;
-		top:200px;
-	}
-
-	75% {
-		transform: rotate(360deg);
-		left:800px;
-		top: 200px;
-	}
-
-	100% {
-		transform: rotate(720deg);
-		left:1500px;
-		top:1000px;
-	}
-
-
-
+	0% {left: 300px;top: 200px;}
+	25% {left:400px;top: 200px;}
+	50% {transform: rotate(360deg);left:500px;top: 200px;}
+	60% {transform: rotate(-360deg);left:650px;top:200px;}
+	75% {transform: rotate(360deg);left:800px;top: 200px;}
+	100% {transform: rotate(720deg);left:1500px;top:1000px;}
 }
